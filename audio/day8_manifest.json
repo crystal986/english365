@@ -1,0 +1,50 @@
+[
+  {
+    "day": 8,
+    "text": "How are you?",
+    "voice": "af_heart",
+    "model": "hexgrad/Kokoro-82M",
+    "speed": 0.75,
+    "path": "audio/day8_main_slow.mp3",
+    "duration": 2.064,
+    "rms": 0.03904712572693825,
+    "bytes": 33453,
+    "sha256": "6fb1409ae03aca5e0a5aa3680ced2816103748509b475216c1e2726bed62be5c"
+  },
+  {
+    "day": 8,
+    "text": "Hi, how are you?",
+    "voice": "af_heart",
+    "model": "hexgrad/Kokoro-82M",
+    "speed": 0.75,
+    "path": "audio/day8_example1_slow.mp3",
+    "duration": 2.208,
+    "rms": 0.03728348761796951,
+    "bytes": 35757,
+    "sha256": "d31b218149e6a98bbe8b2dd2f4a28e8f1c11a7cf18cfc84e9f5d9ba5412af84c"
+  },
+  {
+    "day": 8,
+    "text": "Good morning! How are you today?",
+    "voice": "af_heart",
+    "model": "hexgrad/Kokoro-82M",
+    "speed": 0.75,
+    "path": "audio/day8_example2_slow.mp3",
+    "duration": 3.12,
+    "rms": 0.045907095074653625,
+    "bytes": 50349,
+    "sha256": "187bf21af527472feb0abf3147dc7aa1fef3bb994e69633e5808cf3ab49e6cb4"
+  },
+  {
+    "day": 8,
+    "text": "How are you, Mrs. Lee?",
+    "voice": "af_heart",
+    "model": "hexgrad/Kokoro-82M",
+    "speed": 0.75,
+    "path": "audio/day8_example3_slow.mp3",
+    "duration": 2.592,
+    "rms": 0.04107338562607765,
+    "bytes": 41901,
+    "sha256": "61c5a67d80b2155ce4e72f9926da8eb59976d03e62a873afa3731099e507d7cf"
+  }
+]
