@@ -20,7 +20,11 @@ jobs:
       - name: Verify public HTML and all six MP3s
         run: |
           python - <<'PY'
-          import array, hashlib, json, math, re, subprocess, tempfile, time
+          import array, hashlib, json, math, re, subprocess, tempfile, time, sys, traceback
+          def show_error(kind, error, tb):
+              message = "".join(traceback.format_exception(kind, error, tb))
+              print("::error::" + message.replace("%", "%25").replace("\n", "%0A").replace("\r", "%0D"), flush=True)
+          sys.excepthook = show_error
           from pathlib import Path
           from urllib.request import Request, urlopen
           base = 'https://crystal986.github.io/english365/'
