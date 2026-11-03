@@ -1,0 +1,46 @@
+name: Generate Day 2 Kokoro AI audio
+on:
+  push:
+    branches:
+      - feat/day2-thank-you
+    paths:
+      - .github/workflows/generate-day2-audio.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/day2-thank-you
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install audio dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r tools/requirements-kokoro.txt
+          python -m pip check
+      - name: Generate and verify six MP3 files
+        run: python scripts/generate_day2_audio.py
+      - name: Commit validated audio to Day 2 feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/day2_*.mp3 audio/day2_validation.json
+          git commit -m "Add six validated Kokoro Day 2 MP3s"
+          git push origin HEAD:feat/day2-thank-you
+      - name: Upload validated Day 2 lesson
+        uses: actions/upload-artifact@v4
+        with:
+          name: day2-kokoro-af-heart
+          path: |
+            day2.html
+            audio/day2_*.mp3
+            audio/day2_validation.json
+          if-no-files-found: error
