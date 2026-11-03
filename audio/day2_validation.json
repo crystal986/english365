@@ -1,0 +1,61 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "af_heart",
+  "listening_verified": false,
+  "files": {
+    "day2_thank_you_normal.mp3": {
+      "text": "Thank you!",
+      "speed": 1.0,
+      "duration": 1.536,
+      "rms": 0.04612445831298828,
+      "sha256": "be8dee6ab61013401919f6c4a3fe872db7cef18ede2e856a4e6bb4ac063d9b27",
+      "decoded_sha256": "f7aec02d5c16b7383130cecb254e87b47f93d94b95baa9fa7af956be5f77b7bb",
+      "bytes": 25005
+    },
+    "day2_thank_you_slow.mp3": {
+      "text": "Thank you!",
+      "speed": 0.75,
+      "duration": 2.04,
+      "rms": 0.04165256768465042,
+      "sha256": "d31a14db043db9b0073ea4575c691e1241a7fbaea1dad79c55773a975468e8e6",
+      "decoded_sha256": "6a265d0615567ba3dfa03c8e67228d874ce78aa3f3d95a8586f7965118ef05e7",
+      "bytes": 33069
+    },
+    "day2_thank_you_mary_normal.mp3": {
+      "text": "Thank you, Mary!",
+      "speed": 1.0,
+      "duration": 1.656,
+      "rms": 0.045877404510974884,
+      "sha256": "d01ae7734de44088687c9433faf6d9f38c5542d3e762cf6b847b932a982c22d8",
+      "decoded_sha256": "f8a9e053b7176558251aaab780a678b014c12886eb9d4beb988aa071184a22cb",
+      "bytes": 26925
+    },
+    "day2_thank_you_mary_slow.mp3": {
+      "text": "Thank you, Mary!",
+      "speed": 0.75,
+      "duration": 2.232,
+      "rms": 0.04224448651075363,
+      "sha256": "6774f12bfd91e154e151219ceed53902bf90f56d6bac854b1472332db4e99b33",
+      "decoded_sha256": "4254f60e24ea455b33d6f5787114b5490b00a3a14a51894f4bcf7e9a528ac851",
+      "bytes": 36141
+    },
+    "day2_thank_you_very_much_normal.mp3": {
+      "text": "Thank you very much!",
+      "speed": 1.0,
+      "duration": 1.8,
+      "rms": 0.043865691870450974,
+      "sha256": "08f5d4f5f010c02efa49165498c13c2837015b6fe4e103b121a21825f63723d8",
+      "decoded_sha256": "d51a2f08b0e805c307a15afc39f76f82fdc640fea6a332d8684e5f3512481e90",
+      "bytes": 29229
+    },
+    "day2_thank_you_very_much_slow.mp3": {
+      "text": "Thank you very much!",
+      "speed": 0.75,
+      "duration": 2.496,
+      "rms": 0.041827183216810226,
+      "sha256": "770d69611068da1eaf5791d69ff0a84788e3eda660a1ac802264300502933e50",
+      "decoded_sha256": "18d2b48be539a9229914448548d09ffaa0f803c09771685629bf82bed223aae0",
+      "bytes": 40365
+    }
+  }
+}
