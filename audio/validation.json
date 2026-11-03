@@ -1,0 +1,84 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "af_heart",
+  "speeds": {
+    "normal": 1.0,
+    "slow": 0.75
+  },
+  "method": "Kokoro inference; no time stretching",
+  "listening_verified": false,
+  "files": {
+    "hello_normal.mp3": {
+      "text": "Hello!",
+      "speed": 1.0,
+      "bytes": 23085,
+      "duration_seconds": 1.416,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.04142027348279953,
+      "peak": 0.26540374755859375,
+      "sha256": "780a8bf02b7edb0a32378f41904cb9d5db05595313d43b0fd3ec91aeebe497e9",
+      "decoded_sha256": "2bc4451643b6d0437a2ee750a36163408c5f08661d8e6b82a3dc7f132c75eaa6"
+    },
+    "hello_slow.mp3": {
+      "text": "Hello!",
+      "speed": 0.75,
+      "bytes": 30765,
+      "duration_seconds": 1.896,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.03760804608464241,
+      "peak": 0.3407193124294281,
+      "sha256": "80bb6f81d6d35b2bcc8bf70835109c0c86892770c8071db05158a953ef9f49ae",
+      "decoded_sha256": "dac7958548e023d66206af885884a1bc15413c8242e3afc65fbc8fa8707b11e5"
+    },
+    "hello_mary_normal.mp3": {
+      "text": "Hello, Mary!",
+      "speed": 1.0,
+      "bytes": 26925,
+      "duration_seconds": 1.656,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.04517564922571182,
+      "peak": 0.3358822166919708,
+      "sha256": "c88fd37fd20ea4c28ce32e31c84ddac790a957138c8645f8ab00d93226c5bb6b",
+      "decoded_sha256": "82b53014af584b4b4052736b71ee90bb1be3969aebb54c6bb0f43fd26ea82f73"
+    },
+    "hello_mary_slow.mp3": {
+      "text": "Hello, Mary!",
+      "speed": 0.75,
+      "bytes": 36141,
+      "duration_seconds": 2.232,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.040576234459877014,
+      "peak": 0.3387081027030945,
+      "sha256": "a70eab5523763913b53482f7a50225f069f718bf6751a415d0b19154735d8df7",
+      "decoded_sha256": "d9c5c3344e3e0f114c2a722f1736f54b1f477a27c7f316bbfabbb574ff70cf5d"
+    },
+    "hello_everyone_normal.mp3": {
+      "text": "Hello, everyone!",
+      "speed": 1.0,
+      "bytes": 30765,
+      "duration_seconds": 1.896,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.04277371987700462,
+      "peak": 0.5092865228652954,
+      "sha256": "b1f156c3e41a6d99255dd8b9ab98edca0dd046614dee8a2c8bae9a5a4dbc4437",
+      "decoded_sha256": "603b3f0f1069b0f616c57e3b7ebc85c554803fb7f23e2c6e6b59d2cb1f35267f"
+    },
+    "hello_everyone_slow.mp3": {
+      "text": "Hello, everyone!",
+      "speed": 0.75,
+      "bytes": 41133,
+      "duration_seconds": 2.544,
+      "codec": "mp3",
+      "sample_rate": 24000,
+      "rms": 0.0405917689204216,
+      "peak": 0.32072919607162476,
+      "sha256": "68df6e571c79ac7d2f0e3a9df7d3cde125720db3e97480c361ae145fc895b7f7",
+      "decoded_sha256": "4c8f01b8c6cc289bfcb2ea20dfeb7f5a231929ff9fd1deca8333b076df0e79d4"
+    }
+  }
+}
