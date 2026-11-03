@@ -1,0 +1,54 @@
+name: Generate Week 1 Days 3-7 Kokoro audio
+on:
+  push:
+    branches:
+      - feat/week1-days3-7
+    paths:
+      - .github/workflows/generate-week1-audio.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/week1-days3-7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r tools/requirements-kokoro.txt
+          python -m pip check
+      - name: Generate and verify 38 Kokoro MP3 files
+        run: python scripts/generate_week1_audio.py
+      - name: Commit validated MP3 files to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/day3_*.mp3 audio/day4_*.mp3 audio/day5_*.mp3 audio/day6_*.mp3 audio/day7_review_*.mp3 audio/week1_days3_7_validation.json
+          git commit -m "Add 38 verified Kokoro MP3s for Week 1"
+          git push origin HEAD:feat/week1-days3-7
+      - name: Upload validated first-week lesson bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: week1-days3-7-kokoro-af-heart
+          path: |
+            day3.html
+            day4.html
+            day5.html
+            day6.html
+            day7.html
+            audio/day3_*.mp3
+            audio/day4_*.mp3
+            audio/day5_*.mp3
+            audio/day6_*.mp3
+            audio/day7_review_*.mp3
+            audio/week1_days3_7_validation.json
+          if-no-files-found: error
