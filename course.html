@@ -23,20 +23,20 @@ a.link{color:#1d64aa;font-weight:700}footer{font-size:14px;color:#66768b;line-he
 @media(min-width:640px){.days{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style></head><body><main>
 <section class="hero"><div class="eyebrow">加拿大生活英语 · 365天学习计划</div><h1>全年课程总览</h1>
-<div class="sub">为华语长者设计｜大字易读｜每天一点点｜每7天复习测验</div>
+<div class="sub">为华语长者设计｜大字易读｜每天一点点｜每第7天先学新课，再复习测验</div>
 <div class="stats"><div class="stat"><strong>365</strong><span>全年课程日</span></div><div class="stat"><strong>12</strong><span>个月份</span></div><div class="stat"><strong id="completed-count">7</strong><span>已完成课程</span></div><div class="stat"><strong>52</strong><span>每周复习日</span></div></div>
-<div class="legend"><span class="pill done">可点击学习</span><span class="pill pending">待制作</span><span class="pill review">每第7天复习＋小测</span></div>
+<div class="legend"><span class="pill done">可点击学习</span><span class="pill pending">待制作</span><span class="pill review">每第7天新课＋复习＋小测</span></div>
 <div class="sub">点开月份，选择已完成的课程即可进入学习。灰色课程是全年规划占位，不会跳到空白网页。</div></section>
 <div id="months"></div>
-<p class="note"><strong>每周学习规则：</strong>第1～6天学习新词和生活例句；第7天复习本周7个重点表达（含当天的复习重点 Goodbye!），并完成7道互动选择题，不另开一堂普通新课。测验计划包括“看中文选英文”“听发音选意思”“生活情景选择”，具体题目在本周课程完成后编写。全年第365天安排年度总复习。</p>
-<footer>课程持续更新。第一周课程使用 Kokoro 美式女声 MP3，完成的课程可直接点击学习。</footer>
+<p class="note"><strong>每周学习规则：</strong>每天学习一个重点词或表达及生活例句；每逢第7天，先完整讲解当天第七个新词或表达，再复习本周7个重点，最后完成7道互动测验题。正式课程配音统一采用 Kokoro af_heart 美式女声 0.75 倍速，每句仅一个慢速发音按钮。全年第365天安排年度总复习。</p>
+<footer><a class="link" href="COURSE_SOP.md">查看课程制作标准（SOP）</a> · 课程持续更新。第一周课程使用 Kokoro 美式女声 MP3，完成的课程可直接点击学习。</footer>
 </main>
 <script>
 (function(){
 'use strict';
 var lengths=[31,28,31,30,31,30,31,31,30,31,30,31];
 var themes=['日常问候与礼貌','自我介绍与家庭','超市购物','餐厅与咖啡店','交通与出行','看医生与药房','银行与邮局','邻里与社区','天气与穿衣','电话与预约','节日与社交','生活综合应用'];
-var ready={1:{title:'Hello! · 你好',href:'./'},2:{title:'Thank you! · 谢谢',href:'day2.html'},3:{title:'Please. · 请',href:'day3.html'},4:{title:'Excuse me. · 打扰一下',href:'day4.html'},5:{title:'Sorry. · 对不起',href:'day5.html'},6:{title:"You're welcome. · 不客气",href:'day6.html'},7:{title:'第一周复习＋小测',href:'day7.html'}};
+var ready={1:{title:'Hello! · 你好',href:'./'},2:{title:'Thank you! · 谢谢',href:'day2.html'},3:{title:'Please. · 请',href:'day3.html'},4:{title:'Excuse me. · 打扰一下',href:'day4.html'},5:{title:'Sorry. · 对不起',href:'day5.html'},6:{title:"You're welcome. · 不客气",href:'day6.html'},7:{title:'第一周复习＋小测（待补当天完整新课）',href:'day7.html'}};
 var root=document.getElementById('months'),day=0;
 for(var m=0;m<12;m++){
 var details=document.createElement('details');details.className='month';if(m===0)details.open=true;
@@ -53,7 +53,7 @@ var cell=document.createElement(known?'a':'div');cell.className='day'+(known?' a
 if(known)cell.href=known.href;
 var num=document.createElement('div');num.className='num';num.textContent='第 '+day+' 天';
 var topic=document.createElement('div');topic.className='topic';
-topic.textContent=known?known.title:(final?'全年总复习':weekly?'本周7个重点词 · 复习＋小测':'课程内容待制作');
+topic.textContent=known?known.title:(final?'全年总复习':weekly?'当天新课＋周复习＋小测':'课程内容待制作');
 var state=document.createElement('div');state.className='state';
 state.textContent=known?'✓ 已上线 · 点击学习':final?'年度复习 · 待制作':weekly?'第 '+(day/7)+' 周复习 · 待制作':'即将推出';
 cell.append(num,topic,state);grid.appendChild(cell);
