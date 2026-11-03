@@ -1,0 +1,36 @@
+name: Generate Day 7 Goodbye example Kokoro audio
+on:
+  push:
+    branches:
+      - fix/day7-goodbye-lesson-before-quiz
+    paths:
+      - '.github/workflows/generate-day7-goodbye-kokoro.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/day7-goodbye-lesson-before-quiz
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r tools/requirements-kokoro.txt
+          python -m pip check
+      - name: Generate and verify slow Kokoro example
+        run: python scripts/generate_day7_goodbye_example.py
+      - name: Commit validated audio to PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/day7_goodbye_example_slow.mp3 audio/day7_goodbye_example_validation.json
+          git commit -m "Add validated slow Kokoro audio for Day 7 Goodbye example"
+          git push origin HEAD:fix/day7-goodbye-lesson-before-quiz
