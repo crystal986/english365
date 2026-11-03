@@ -1,0 +1,52 @@
+name: Publish verified lesson
+on:
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Day number (currently 8)"
+        required: true
+        default: "8"
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: lesson-publish
+  cancel-in-progress: false
+jobs:
+  generate-validate-merge:
+    if: ${{ github.ref == 'refs/heads/main' && inputs.day == '8' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/day8-automated-publishing
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Kokoro and FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          pip install kokoro soundfile numpy torch
+      - name: Generate real Kokoro MP3
+        run: python scripts/generate_day8_audio.py
+      - name: Verify all MP3 and course links
+        run: python scripts/validate_day8.py
+      - name: Commit generated audio and manifest
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add audio/day8_*slow.mp3 audio/day8_manifest.json
+          git diff --cached --quiet || git commit -m "audio: verified Kokoro Day 8 af_heart 0.75"
+          git push origin HEAD:feat/day8-automated-publishing
+      - name: Open draft PR and record review gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh pr view feat/day8-automated-publishing --json number >/dev/null 2>&1; then
+            gh pr create --draft --base main --head feat/day8-automated-publishing --title "Day 8: How are you? verified Kokoro lesson" --body "Day 8; 4 Kokoro-82M af_heart speed=0.75 MP3; generated with ffmpeg; file, hash, decode and HTML checks passed. Manual mobile playback/listening review remains required before merge."
+          fi
+          echo "Audio checks passed. Draft PR intentionally requires human listening and mobile acceptance before merge."
