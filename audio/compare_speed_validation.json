@@ -1,0 +1,21 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "af_heart",
+  "text": "Thank you very much!",
+  "results": {
+    "05": {
+      "speed": 0.5,
+      "duration_seconds": 3.6,
+      "rms": 0.03894145414233208,
+      "bytes": 58029,
+      "sha256": "2840779f797457ddb101d22d4e099fd44a7f623ae05629bc2ac99bb480668979"
+    },
+    "075": {
+      "speed": 0.75,
+      "duration_seconds": 2.496,
+      "rms": 0.04184044525027275,
+      "bytes": 40365,
+      "sha256": "fd5e0bb8868ac43c7ab8d9082b79bfd76f3a70de6db9f3aa4e008b1413b7c8da"
+    }
+  }
+}
