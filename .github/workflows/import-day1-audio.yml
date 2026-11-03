@@ -1,0 +1,48 @@
+name: Import validated Day 1 AI audio artifact
+on:
+  push:
+    branches:
+      - feat/day1-kokoro-audio
+    paths:
+      - .github/workflows/import-day1-audio.yml
+permissions:
+  contents: write
+  actions: read
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/day1-kokoro-audio
+          persist-credentials: true
+      - name: Download successful Kokoro generation artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/day1-artifact
+          gh run download 41578869730 --repo crystal986/english365 --name day1-kokoro-af-heart-mp3 --dir /tmp/day1-artifact
+      - name: Validate exact expected files and install into feature branch
+        run: |
+          set -euo pipefail
+          for f in hello_normal hello_slow hello_mary_normal hello_mary_slow hello_everyone_normal hello_everyone_slow; do
+            test -s "/tmp/day1-artifact/audio/${f}.mp3"
+            ffprobe -v error -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "/tmp/day1-artifact/audio/${f}.mp3" | grep -qx mp3
+          done
+          test -s /tmp/day1-artifact/audio/validation.json
+          test -s /tmp/day1-artifact/index.html
+          grep -q 'id="day1-player"' /tmp/day1-artifact/index.html
+          grep -q 'audio/hello_normal.mp3' /tmp/day1-artifact/index.html
+          mkdir -p audio
+          cp /tmp/day1-artifact/audio/*.mp3 audio/
+          cp /tmp/day1-artifact/audio/validation.json audio/
+          cp /tmp/day1-artifact/index.html index.html
+      - name: Commit verified generated files to feature branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html audio/
+          git diff --cached --quiet && exit 0
+          git commit -m "Add validated Kokoro af_heart Day 1 audio and player"
+          git push origin HEAD:feat/day1-kokoro-audio
