@@ -1,0 +1,37 @@
+name: Generate Kokoro 0.5 vs 0.75 comparison
+on:
+  push:
+    branches:
+      - feat/speed-comparison-05-075
+    paths:
+      - .github/workflows/generate-speed-comparison.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/speed-comparison-05-075
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Kokoro dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r tools/requirements-kokoro.txt
+          python -m pip check
+      - name: Generate and validate comparison audio
+        run: python scripts/generate_speed_comparison.py
+      - name: Commit verified audio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/compare_thank_you_very_much_05.mp3 audio/compare_thank_you_very_much_075.mp3 audio/compare_speed_validation.json
+          git commit -m "Add validated Kokoro speed comparison MP3s"
+          git push origin HEAD:feat/speed-comparison-05-075
