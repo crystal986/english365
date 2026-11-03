@@ -1,0 +1,348 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "af_heart",
+  "files": {
+    "day3_1_normal.mp3": {
+      "day": 3,
+      "text": "Please.",
+      "speed": 1.0,
+      "duration": 1.536,
+      "rms": 0.0399089977145195,
+      "sha256": "f625e5a303155e119df1d173a3f57ab52ed06baf7702353c9f2ffe1b02e6281c",
+      "bytes": 25005
+    },
+    "day3_1_slow.mp3": {
+      "day": 3,
+      "text": "Please.",
+      "speed": 0.75,
+      "duration": 2.04,
+      "rms": 0.036263637244701385,
+      "sha256": "408ee907e0392c35740b50f8c2c686f35d77ae672c75b320e572111388e1a271",
+      "bytes": 33069
+    },
+    "day3_2_normal.mp3": {
+      "day": 3,
+      "text": "Coffee, please.",
+      "speed": 1.0,
+      "duration": 1.8,
+      "rms": 0.04727640002965927,
+      "sha256": "049de275b635653d9f757de2800f12a17ae0290770ae00d045b1ecd7f67ec4cc",
+      "bytes": 29229
+    },
+    "day3_2_slow.mp3": {
+      "day": 3,
+      "text": "Coffee, please.",
+      "speed": 0.75,
+      "duration": 2.448,
+      "rms": 0.044771451503038406,
+      "sha256": "a2b433236e2fb7e64cf6be6370c10c36adaf9d174e03072f49b4e997fb472d0e",
+      "bytes": 39597
+    },
+    "day3_3_normal.mp3": {
+      "day": 3,
+      "text": "One bag, please.",
+      "speed": 1.0,
+      "duration": 1.944,
+      "rms": 0.04652241989970207,
+      "sha256": "77cb88147b73d3a33c771fe822d32e0dc969a22af9100eb572858fe5102ce5ee",
+      "bytes": 31533
+    },
+    "day3_3_slow.mp3": {
+      "day": 3,
+      "text": "One bag, please.",
+      "speed": 0.75,
+      "duration": 2.616,
+      "rms": 0.044204555451869965,
+      "sha256": "9b204cb643cbc848792cd66ce4db9c723da1c4fbf73d9215b679a9a94de46068",
+      "bytes": 42285
+    },
+    "day4_1_normal.mp3": {
+      "day": 4,
+      "text": "Excuse me.",
+      "speed": 1.0,
+      "duration": 1.68,
+      "rms": 0.042481642216444016,
+      "sha256": "5a6f23dbd76c23cd22980570e38cf7c25b6f12ccf673a47011e75d2e04450be2",
+      "bytes": 27309
+    },
+    "day4_1_slow.mp3": {
+      "day": 4,
+      "text": "Excuse me.",
+      "speed": 0.75,
+      "duration": 2.232,
+      "rms": 0.04177095368504524,
+      "sha256": "550ccb0a7faeb95c7845ad6306e51786691c8dba28309829a53b6d00a2867bfa",
+      "bytes": 36141
+    },
+    "day4_2_normal.mp3": {
+      "day": 4,
+      "text": "Excuse me, please.",
+      "speed": 1.0,
+      "duration": 1.992,
+      "rms": 0.040685005486011505,
+      "sha256": "b9d9bb33749e5a110d8eb805ba4f9c10fcf062968f9797a4dca70beedf30921f",
+      "bytes": 32301
+    },
+    "day4_2_slow.mp3": {
+      "day": 4,
+      "text": "Excuse me, please.",
+      "speed": 0.75,
+      "duration": 2.664,
+      "rms": 0.042292457073926926,
+      "sha256": "7f6251e218324ff8e0a635296050f6ecaa8bab9479f6d335870cacacde487a07",
+      "bytes": 43053
+    },
+    "day4_3_normal.mp3": {
+      "day": 4,
+      "text": "Excuse me, where is the bus stop?",
+      "speed": 1.0,
+      "duration": 2.592,
+      "rms": 0.044208865612745285,
+      "sha256": "312d4b9a1b3592e8ed27c412f3ce44b5101e763bcf503b7cc6ded92c12b3f420",
+      "bytes": 41901
+    },
+    "day4_3_slow.mp3": {
+      "day": 4,
+      "text": "Excuse me, where is the bus stop?",
+      "speed": 0.75,
+      "duration": 3.576,
+      "rms": 0.04335194081068039,
+      "sha256": "472aa8a087de7d02aaf34675599887ea09d255590b376149bd3ad10123528e0a",
+      "bytes": 57645
+    },
+    "day5_1_normal.mp3": {
+      "day": 5,
+      "text": "Sorry.",
+      "speed": 1.0,
+      "duration": 1.464,
+      "rms": 0.04329362511634827,
+      "sha256": "e4b287c1bf38c3c64215b004df4336f8c79c8fa4f0582af2c816d1f8ad9cd288",
+      "bytes": 23853
+    },
+    "day5_1_slow.mp3": {
+      "day": 5,
+      "text": "Sorry.",
+      "speed": 0.75,
+      "duration": 1.896,
+      "rms": 0.03902711346745491,
+      "sha256": "09cb0cda0d4db7aa4ddc1aa8ea971822839235ffc6f35c80523e61b75a8aac8f",
+      "bytes": 30765
+    },
+    "day5_2_normal.mp3": {
+      "day": 5,
+      "text": "I'm sorry.",
+      "speed": 1.0,
+      "duration": 1.56,
+      "rms": 0.04639402776956558,
+      "sha256": "5b9988ab11b917934b0ad998824f49ca86ed2e66961060cd43541bc24face6ae",
+      "bytes": 25389
+    },
+    "day5_2_slow.mp3": {
+      "day": 5,
+      "text": "I'm sorry.",
+      "speed": 0.75,
+      "duration": 2.136,
+      "rms": 0.04323344677686691,
+      "sha256": "6e36db73c5dd4dfcdd9e98b2b0c9f1703e34d73281aad519da852c667c81bc13",
+      "bytes": 34605
+    },
+    "day5_3_normal.mp3": {
+      "day": 5,
+      "text": "Sorry, I'm late.",
+      "speed": 1.0,
+      "duration": 1.728,
+      "rms": 0.04285265505313873,
+      "sha256": "f652856fe7495bdd7280a50c2e0582f87e67121abd8321044405196a11a471a4",
+      "bytes": 28077
+    },
+    "day5_3_slow.mp3": {
+      "day": 5,
+      "text": "Sorry, I'm late.",
+      "speed": 0.75,
+      "duration": 2.304,
+      "rms": 0.040178555995225906,
+      "sha256": "8e64fed6dfb88615e0345762a91876492c22e369fa80c6311ede6b0297a7623b",
+      "bytes": 37293
+    },
+    "day6_1_normal.mp3": {
+      "day": 6,
+      "text": "You're welcome.",
+      "speed": 1.0,
+      "duration": 1.608,
+      "rms": 0.04571589082479477,
+      "sha256": "9e3204ee2a487d831dedcbfae9fa150a90ba6fe13966d306e16f6fcf0c1460a3",
+      "bytes": 26157
+    },
+    "day6_1_slow.mp3": {
+      "day": 6,
+      "text": "You're welcome.",
+      "speed": 0.75,
+      "duration": 2.136,
+      "rms": 0.04268825799226761,
+      "sha256": "046af8e2e5535c13491ff071237e1df09ad2d05f354e08b808643bc6c153b98a",
+      "bytes": 34605
+    },
+    "day6_2_normal.mp3": {
+      "day": 6,
+      "text": "You're very welcome.",
+      "speed": 1.0,
+      "duration": 1.848,
+      "rms": 0.04427509382367134,
+      "sha256": "88217c168772bfd03af3ec88ed688f479135e8e8abbf1c50d74e2740a9066981",
+      "bytes": 29997
+    },
+    "day6_2_slow.mp3": {
+      "day": 6,
+      "text": "You're very welcome.",
+      "speed": 0.75,
+      "duration": 2.424,
+      "rms": 0.040520645678043365,
+      "sha256": "6a565315ffbfd9348e043af6e2e7455d46c7beaae7b49147ae953b2945c2e69b",
+      "bytes": 39213
+    },
+    "day6_3_normal.mp3": {
+      "day": 6,
+      "text": "Thank you. You're welcome.",
+      "speed": 1.0,
+      "duration": 2.112,
+      "rms": 0.044954098761081696,
+      "sha256": "59f70b1ad6bbfbff4a8b0c16221adbf3e7775fc486efa782a94d0c8e5e07cf5c",
+      "bytes": 34221
+    },
+    "day6_3_slow.mp3": {
+      "day": 6,
+      "text": "Thank you. You're welcome.",
+      "speed": 0.75,
+      "duration": 2.808,
+      "rms": 0.04345707222819328,
+      "sha256": "171487738e0aeabbf7f7b3a9db358d856445873eec7f4ff5845e2a80c6e4d8bb",
+      "bytes": 45357
+    },
+    "day7_review_1_normal.mp3": {
+      "day": 7,
+      "text": "Hello!",
+      "speed": 1.0,
+      "duration": 1.416,
+      "rms": 0.041453294456005096,
+      "sha256": "adfda8469809110fd248c46e8880a1fce548979646ec0338ca31cc4a7b2d21d0",
+      "bytes": 23085
+    },
+    "day7_review_1_slow.mp3": {
+      "day": 7,
+      "text": "Hello!",
+      "speed": 0.75,
+      "duration": 1.896,
+      "rms": 0.037640124559402466,
+      "sha256": "384c76ebe9eacf6be900f3f57629a5e72f39ec2a475c62654a7002ded83f7286",
+      "bytes": 30765
+    },
+    "day7_review_2_normal.mp3": {
+      "day": 7,
+      "text": "Thank you!",
+      "speed": 1.0,
+      "duration": 1.536,
+      "rms": 0.046073757112026215,
+      "sha256": "8c8fb5875a86f9d4e4d0066c566cc06dcd94a30e4e20bbb9e4c13bbfc722dda8",
+      "bytes": 25005
+    },
+    "day7_review_2_slow.mp3": {
+      "day": 7,
+      "text": "Thank you!",
+      "speed": 0.75,
+      "duration": 2.04,
+      "rms": 0.04162023589015007,
+      "sha256": "400f00a8235a1c3e97fd4d066a5f4094d2619a7a444c4884ef0bbdd524930569",
+      "bytes": 33069
+    },
+    "day7_review_3_normal.mp3": {
+      "day": 7,
+      "text": "Please.",
+      "speed": 1.0,
+      "duration": 1.536,
+      "rms": 0.03989715874195099,
+      "sha256": "9bed5d5bf34851d824dec0b44a846c8ef26460b34b06ec5e0880b7a4e992e3c4",
+      "bytes": 25005
+    },
+    "day7_review_3_slow.mp3": {
+      "day": 7,
+      "text": "Please.",
+      "speed": 0.75,
+      "duration": 2.04,
+      "rms": 0.03617872670292854,
+      "sha256": "1b87ecda406ae603b59709643fda21430aeddc765c362fe06921e12a50acdde5",
+      "bytes": 33069
+    },
+    "day7_review_4_normal.mp3": {
+      "day": 7,
+      "text": "Excuse me.",
+      "speed": 1.0,
+      "duration": 1.68,
+      "rms": 0.04234530031681061,
+      "sha256": "35b6143233336670cf2108c0d6ec236f4574fd5d13a7c5b22f1c32173f8a3a92",
+      "bytes": 27309
+    },
+    "day7_review_4_slow.mp3": {
+      "day": 7,
+      "text": "Excuse me.",
+      "speed": 0.75,
+      "duration": 2.232,
+      "rms": 0.0417451485991478,
+      "sha256": "96682f536fc9a874ab03993d146457c190ffb9f82162192d072c3ed362201dd5",
+      "bytes": 36141
+    },
+    "day7_review_5_normal.mp3": {
+      "day": 7,
+      "text": "Sorry.",
+      "speed": 1.0,
+      "duration": 1.464,
+      "rms": 0.04323688894510269,
+      "sha256": "c56d1e51942328dca2140434ccebadcdbe92fbf3bb79517972a92a892eece056",
+      "bytes": 23853
+    },
+    "day7_review_5_slow.mp3": {
+      "day": 7,
+      "text": "Sorry.",
+      "speed": 0.75,
+      "duration": 1.896,
+      "rms": 0.039086733013391495,
+      "sha256": "2a65ebc8dc192c45fe4128136ec0967f5c1b736bc09d4d3a85ba7ac6786646f2",
+      "bytes": 30765
+    },
+    "day7_review_6_normal.mp3": {
+      "day": 7,
+      "text": "You're welcome.",
+      "speed": 1.0,
+      "duration": 1.608,
+      "rms": 0.04569411277770996,
+      "sha256": "e6b48f0413f88d091f1b3aee5b8bcbcfbed49d034a4ad7c9baf42de60b5a8d41",
+      "bytes": 26157
+    },
+    "day7_review_6_slow.mp3": {
+      "day": 7,
+      "text": "You're welcome.",
+      "speed": 0.75,
+      "duration": 2.136,
+      "rms": 0.04273514449596405,
+      "sha256": "7814f0fd4721797e9df5db952f7b1334e8dabf04f2927607f270f205c809f305",
+      "bytes": 34605
+    },
+    "day7_review_7_normal.mp3": {
+      "day": 7,
+      "text": "Goodbye!",
+      "speed": 1.0,
+      "duration": 1.608,
+      "rms": 0.04313882812857628,
+      "sha256": "76512f0db1f13cc2e1339f3bfe010290b3a5fa014a4ab3f4dc22cfd565a32354",
+      "bytes": 26157
+    },
+    "day7_review_7_slow.mp3": {
+      "day": 7,
+      "text": "Goodbye!",
+      "speed": 0.75,
+      "duration": 2.088,
+      "rms": 0.03914816677570343,
+      "sha256": "6c101f490e1a13c62554951149aa5cb6b4b603d88e9c0a884440ab185ce3ba6b",
+      "bytes": 33837
+    }
+  }
+}
