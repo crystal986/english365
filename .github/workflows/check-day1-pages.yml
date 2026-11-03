@@ -1,0 +1,76 @@
+name: Verify published Day 1 audio
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/check-day1-pages.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install audio verification tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Verify public HTML and all six MP3s
+        run: |
+          python - <<'PY'
+          import array, hashlib, json, math, re, subprocess, tempfile, time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          base = 'https://crystal986.github.io/english365/'
+          expected = json.loads(Path('audio/validation.json').read_text())['files']
+          local_html = Path('index.html').read_bytes()
+          def fetch(path):
+              with urlopen(Request(base + path, headers={'Cache-Control': 'no-cache'}), timeout=30) as response:
+                  assert response.status == 200
+                  return response.read(), response.headers.get_content_type()
+          for attempt in range(18):
+              try:
+                  body, content_type = fetch('')
+                  assert content_type == 'text/html'
+                  assert body == local_html, 'Published HTML has not caught up with main'
+                  break
+              except Exception:
+                  if attempt == 17: raise
+                  time.sleep(10)
+          paths = re.findall(r'data-audio="([^"]+)"', body.decode('utf-8'))
+          assert len(paths) == 8 and len(set(paths)) == 6
+          report = {'homepage': {'status': 200, 'matches_main': True}, 'audio': {}}
+          decoded_hashes = set()
+          with tempfile.TemporaryDirectory() as directory:
+              for name, metadata in expected.items():
+                  path = 'audio/' + name
+                  assert path in paths
+                  body, mime = fetch(path)
+                  assert mime == 'audio/mpeg', (path, mime)
+                  assert hashlib.sha256(body).hexdigest() == metadata['sha256']
+                  target = Path(directory) / name
+                  target.write_bytes(body)
+                  probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(target)]))
+                  stream = next(s for s in probe['streams'] if s['codec_type'] == 'audio')
+                  assert stream['codec_name'] == 'mp3' and int(stream['sample_rate']) == 24000
+                  duration = float(probe['format']['duration'])
+                  assert 0.2 < duration < 20
+                  raw = subprocess.check_output(['ffmpeg', '-v', 'error', '-i', str(target), '-f', 'f32le', '-ac', '1', '-ar', '24000', '-'])
+                  samples = array.array('f', raw)
+                  assert samples and all(math.isfinite(s) for s in samples)
+                  rms = math.sqrt(sum(s*s for s in samples) / len(samples))
+                  assert rms > 0.001
+                  decoded_hashes.add(hashlib.sha256(raw).hexdigest())
+                  report['audio'][path] = {'status': 200, 'content_type': mime, 'bytes': len(body), 'duration': duration, 'sample_rate': 24000, 'rms': rms, 'matches_validated_file': True}
+                  print(path, json.dumps(report['audio'][path]), flush=True)
+          assert len(report['audio']) == 6 and len(decoded_hashes) == 6
+          Path('/tmp/day1-public-validation.json').write_text(json.dumps(report, indent=2))
+          print('PASS: published HTML and six distinct, non-silent public MP3s verified.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: day1-public-validation
+          path: /tmp/day1-public-validation.json
+          if-no-files-found: error
