@@ -1,0 +1,11 @@
+{
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "af_heart",
+  "text": "Goodbye! See you tomorrow.",
+  "speed": 0.75,
+  "file": "day7_goodbye_example_slow.mp3",
+  "duration": 2.904,
+  "rms": 0.04330991208553314,
+  "bytes": 46893,
+  "sha256": "a22af5eeb5b0543987c1be36d0b19d31257cca726d51658594acccee17898be3"
+}
