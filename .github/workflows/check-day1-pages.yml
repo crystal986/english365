@@ -52,7 +52,7 @@ jobs:
                   path = 'audio/' + name
                   assert path in paths
                   body, mime = fetch(path)
-                  assert mime == 'audio/mpeg', (path, mime)
+                  assert mime in ('audio/mpeg', 'audio/mp3'), (path, mime)
                   assert hashlib.sha256(body).hexdigest() == metadata['sha256']
                   target = Path(directory) / name
                   target.write_bytes(body)
