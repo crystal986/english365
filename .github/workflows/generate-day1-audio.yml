@@ -1,6 +1,11 @@
 name: Generate Day 1 Kokoro AI audio
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feat/day1-kokoro-audio
+    paths:
+      - .github/workflows/generate-day1-audio.yml
 permissions:
   contents: read
 jobs:
