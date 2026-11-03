@@ -22,6 +22,12 @@ jobs:
         run: |
           mkdir -p /tmp/day1-artifact
           gh run download 41578869730 --repo crystal986/english365 --name day1-kokoro-af-heart-mp3 --dir /tmp/day1-artifact
+      - name: Install FFmpeg and ffprobe
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          ffmpeg -version
+          ffprobe -version
       - name: Validate exact expected files and install into feature branch
         run: |
           set -euo pipefail
