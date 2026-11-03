@@ -1,0 +1,26 @@
+name: Generate Day 1 Kokoro AI audio
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+      - name: Install open-source Kokoro
+        run: pip install 'kokoro>=0.9.4,<1.0' soundfile numpy
+      - name: Generate and validate MP3s
+        run: python scripts/generate_day1_audio.py
+      - name: Upload six MP3 files as downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: day1-kokoro-af-heart-mp3
+          path: audio/*.mp3
+          if-no-files-found: error
