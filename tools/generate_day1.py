@@ -23,12 +23,13 @@ def validate(path):
     peak = float(np.max(np.abs(samples))) if len(samples) else 0
     duration = float(info['format']['duration'])
     if not (stream['codec_name'] == 'mp3' and path.stat().st_size > 1000
-            and 0.2 < duration < 20 and np.isfinite(samples).all()
+            and int(stream['sample_rate']) == 24000 and 0.2 < duration < 20 and np.isfinite(samples).all()
             and math.isfinite(rms) and rms > 0.001 and peak > 0.01):
         raise ValueError(f'Invalid or silent audio: {path}')
     return dict(bytes=path.stat().st_size, duration_seconds=duration,
                 codec=stream['codec_name'], sample_rate=int(stream['sample_rate']),
-                rms=rms, peak=peak, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+                rms=rms, peak=peak, sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                decoded_sha256=hashlib.sha256(raw).hexdigest())
 
 
 def main():
@@ -69,6 +70,9 @@ def main():
                                 '-codec:a', 'libmp3lame', '-b:a', '128k', str(mp3)], check=True)
                 report['files'][mp3.name] = dict(text=text, speed=speed, **validate(mp3))
                 print(mp3.name, report['files'][mp3.name], flush=True)
+        for field in ('sha256', 'decoded_sha256'):
+            if len({item[field] for item in report['files'].values()}) != 6:
+                raise RuntimeError(f'Duplicate audio detected: {field}')
         for key in TEXTS:
             if report['files'][key+'_slow.mp3']['duration_seconds'] <= report['files'][key+'_normal.mp3']['duration_seconds']:
                 raise RuntimeError(f'Slow audio is not longer: {key}')

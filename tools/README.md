@@ -36,3 +36,12 @@ Before publishing, listen to all files and verify served HTML and MP3 responses
 (200, audio/mpeg), then test iPhone Safari, Android Chrome and WeChat: all eight
 buttons, rapid switching without overlapping audio, repeated playback, visible
 network errors and readable portrait layout. No physical-device test is claimed.
+
+The feature branch now incorporates main's existing opt-in generation workflow.
+On this branch it uses the same pinned generator, validates 24 kHz sampling and
+six distinct encoded/decoded SHA-256 hashes, and uploads the HTML, six MP3s and
+validation report as one artifact. It never commits, merges, or deploys by itself.
+Run it from Actions → Generate Day 1 Kokoro AI audio → Run workflow, selecting
+`feat/day1-kokoro-audio`. Its button may appear only after the branch workflow has
+been recognized; the existing main workflow can still generate the six MP3s.
+No successful Actions run or audio generation is claimed by this source change.
