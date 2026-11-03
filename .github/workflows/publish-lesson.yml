@@ -1,5 +1,9 @@
 name: Publish verified lesson
 on:
+  push:
+    branches: [feat/day8-automated-publishing]
+    paths-ignore:
+      - 'audio/**'
   workflow_dispatch:
     inputs:
       day:
@@ -14,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   generate-validate-merge:
-    if: ${{ github.ref == 'refs/heads/main' && inputs.day == '8' }}
+    if: ${{ github.ref == 'refs/heads/feat/day8-automated-publishing' }}
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
