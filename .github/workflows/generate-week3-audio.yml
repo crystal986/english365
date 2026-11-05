@@ -1,0 +1,30 @@
+name: Generate Week 3 slow audio
+on:
+  push:
+    branches: [feat/week3-day15-21]
+    paths:
+      - 'scripts/generate_week3_audio.py'
+      - 'scripts/validate_week3.py'
+      - '.github/workflows/generate-week3-audio.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
+      - run: pip install kokoro soundfile numpy torch
+      - run: python scripts/generate_week3_audio.py
+      - run: python scripts/validate_week3.py
+      - name: Commit verified audio to preview branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/day{15,16,17,18,19,20,21}_*_slow.mp3 audio/week3_manifest.json
+          git diff --cached --quiet || (git commit -m "Generate verified Kokoro Week 3 MP3s" && git push)
