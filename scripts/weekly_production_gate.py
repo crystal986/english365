@@ -11,6 +11,10 @@ assert isinstance(plan,list) and len(plan)==365,"Expected exactly 365 ordered da
 for i,x in enumerate(plan,1):
     assert isinstance(x,dict) and x.get("day")==i and isinstance(x.get("word"),str) and x["word"].strip(),f"Invalid Day {i}"
 assert len({x["word"].strip().casefold() for x in plan})==365,"Duplicate core words: stop for manual review"
+extras={121:"here",122:"there",274:"I",275:"you",276:"we",277:"he",278:"she",279:"my",280:"your",281:"name"}
+assert {x["day"]:x["supplement"] for x in plan if "supplement" in x}==extras,"Supplement assignments differ from approved V1.2"
+assert [x["word"] for x in plan[14:21]]==["hi","bye","yes","no","thanks","okay","good"],"Week 3 differs from V1.2"
+assert plan[364]["word"]=="careful","Day 365 differs from V1.2"
 week=int(os.environ.get("WEEK","0"))
 assert 3<=week<=53,"WEEK must be 3..53"
 first=(week-1)*7+1;last=min(week*7,365)
