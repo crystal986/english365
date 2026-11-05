@@ -1,0 +1,55 @@
+name: Deploy and verify GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check published course files
+        run: |
+          test -s course.html
+          if grep -q "8:{title:" course.html; then
+            python scripts/validate_day8.py
+          fi
+  deploy:
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
+  verify-public:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public HTTPS pages and MP3
+        run: |
+          set -euo pipefail
+          base="https://crystal986.github.io/english365"
+          for path in course.html day8.html audio/day8_main_slow.mp3; do
+            for attempt in 1 2 3 4 5 6; do
+              if curl -fLsS --retry 2 --max-time 20 "$base/$path" -o /tmp/check; then
+                test -s /tmp/check && break
+              fi
+              if [ "$attempt" -eq 6 ]; then echo "Public verification failed: $path"; exit 1; fi
+              sleep 15
+            done
+          done
+          echo "Public Pages verification passed"
