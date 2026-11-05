@@ -1,0 +1,30 @@
+name: Generate and validate Week 2 audio
+on:
+  push:
+    branches: [feat/week2-day9-14]
+    paths:
+      - 'scripts/generate_week2_audio.py'
+      - 'scripts/validate_week2.py'
+      - '.github/workflows/generate-week2-audio.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
+      - run: pip install kokoro soundfile numpy torch
+      - run: python scripts/generate_week2_audio.py
+      - run: python scripts/validate_week2.py
+      - name: Commit verified audio to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/day{9,10,11,12,13,14}_*_slow.mp3 audio/week2_manifest.json
+          git diff --cached --quiet || (git commit -m "Generate verified Kokoro Week 2 MP3 audio" && git push)
