@@ -1,0 +1,1472 @@
+[
+  {
+    "day": 1,
+    "word": "Hello!"
+  },
+  {
+    "day": 2,
+    "word": "Thank you!"
+  },
+  {
+    "day": 3,
+    "word": "Please."
+  },
+  {
+    "day": 4,
+    "word": "Excuse me."
+  },
+  {
+    "day": 5,
+    "word": "Sorry."
+  },
+  {
+    "day": 6,
+    "word": "You're welcome."
+  },
+  {
+    "day": 7,
+    "word": "Goodbye!"
+  },
+  {
+    "day": 8,
+    "word": "How are you?"
+  },
+  {
+    "day": 9,
+    "word": "I'm good, thank you."
+  },
+  {
+    "day": 10,
+    "word": "Nice to meet you."
+  },
+  {
+    "day": 11,
+    "word": "My name is..."
+  },
+  {
+    "day": 12,
+    "word": "What's your name?"
+  },
+  {
+    "day": 13,
+    "word": "Where are you from?"
+  },
+  {
+    "day": 14,
+    "word": "I live in Canada."
+  },
+  {
+    "day": 15,
+    "word": "hi"
+  },
+  {
+    "day": 16,
+    "word": "bye"
+  },
+  {
+    "day": 17,
+    "word": "yes"
+  },
+  {
+    "day": 18,
+    "word": "no"
+  },
+  {
+    "day": 19,
+    "word": "thanks"
+  },
+  {
+    "day": 20,
+    "word": "okay"
+  },
+  {
+    "day": 21,
+    "word": "good"
+  },
+  {
+    "day": 22,
+    "word": "morning"
+  },
+  {
+    "day": 23,
+    "word": "afternoon"
+  },
+  {
+    "day": 24,
+    "word": "evening"
+  },
+  {
+    "day": 25,
+    "word": "night"
+  },
+  {
+    "day": 26,
+    "word": "today"
+  },
+  {
+    "day": 27,
+    "word": "tomorrow"
+  },
+  {
+    "day": 28,
+    "word": "yesterday"
+  },
+  {
+    "day": 29,
+    "word": "now"
+  },
+  {
+    "day": 30,
+    "word": "later"
+  },
+  {
+    "day": 31,
+    "word": "help"
+  },
+  {
+    "day": 32,
+    "word": "store"
+  },
+  {
+    "day": 33,
+    "word": "supermarket"
+  },
+  {
+    "day": 34,
+    "word": "buy"
+  },
+  {
+    "day": 35,
+    "word": "pay"
+  },
+  {
+    "day": 36,
+    "word": "price"
+  },
+  {
+    "day": 37,
+    "word": "dollar"
+  },
+  {
+    "day": 38,
+    "word": "cent"
+  },
+  {
+    "day": 39,
+    "word": "cash"
+  },
+  {
+    "day": 40,
+    "word": "card"
+  },
+  {
+    "day": 41,
+    "word": "receipt"
+  },
+  {
+    "day": 42,
+    "word": "bag"
+  },
+  {
+    "day": 43,
+    "word": "cart"
+  },
+  {
+    "day": 44,
+    "word": "basket"
+  },
+  {
+    "day": 45,
+    "word": "cheap"
+  },
+  {
+    "day": 46,
+    "word": "expensive"
+  },
+  {
+    "day": 47,
+    "word": "sale"
+  },
+  {
+    "day": 48,
+    "word": "discount"
+  },
+  {
+    "day": 49,
+    "word": "free"
+  },
+  {
+    "day": 50,
+    "word": "fresh"
+  },
+  {
+    "day": 51,
+    "word": "fruit"
+  },
+  {
+    "day": 52,
+    "word": "vegetable"
+  },
+  {
+    "day": 53,
+    "word": "apple"
+  },
+  {
+    "day": 54,
+    "word": "banana"
+  },
+  {
+    "day": 55,
+    "word": "orange"
+  },
+  {
+    "day": 56,
+    "word": "potato"
+  },
+  {
+    "day": 57,
+    "word": "tomato"
+  },
+  {
+    "day": 58,
+    "word": "onion"
+  },
+  {
+    "day": 59,
+    "word": "egg"
+  },
+  {
+    "day": 60,
+    "word": "food"
+  },
+  {
+    "day": 61,
+    "word": "water"
+  },
+  {
+    "day": 62,
+    "word": "milk"
+  },
+  {
+    "day": 63,
+    "word": "bread"
+  },
+  {
+    "day": 64,
+    "word": "rice"
+  },
+  {
+    "day": 65,
+    "word": "noodle"
+  },
+  {
+    "day": 66,
+    "word": "soup"
+  },
+  {
+    "day": 67,
+    "word": "meat"
+  },
+  {
+    "day": 68,
+    "word": "chicken"
+  },
+  {
+    "day": 69,
+    "word": "beef"
+  },
+  {
+    "day": 70,
+    "word": "pork"
+  },
+  {
+    "day": 71,
+    "word": "fish"
+  },
+  {
+    "day": 72,
+    "word": "salt"
+  },
+  {
+    "day": 73,
+    "word": "sugar"
+  },
+  {
+    "day": 74,
+    "word": "oil"
+  },
+  {
+    "day": 75,
+    "word": "tea"
+  },
+  {
+    "day": 76,
+    "word": "coffee"
+  },
+  {
+    "day": 77,
+    "word": "juice"
+  },
+  {
+    "day": 78,
+    "word": "breakfast"
+  },
+  {
+    "day": 79,
+    "word": "lunch"
+  },
+  {
+    "day": 80,
+    "word": "dinner"
+  },
+  {
+    "day": 81,
+    "word": "hungry"
+  },
+  {
+    "day": 82,
+    "word": "thirsty"
+  },
+  {
+    "day": 83,
+    "word": "eat"
+  },
+  {
+    "day": 84,
+    "word": "drink"
+  },
+  {
+    "day": 85,
+    "word": "cook"
+  },
+  {
+    "day": 86,
+    "word": "hot"
+  },
+  {
+    "day": 87,
+    "word": "cold"
+  },
+  {
+    "day": 88,
+    "word": "sweet"
+  },
+  {
+    "day": 89,
+    "word": "delicious"
+  },
+  {
+    "day": 90,
+    "word": "full"
+  },
+  {
+    "day": 91,
+    "word": "home"
+  },
+  {
+    "day": 92,
+    "word": "house"
+  },
+  {
+    "day": 93,
+    "word": "apartment"
+  },
+  {
+    "day": 94,
+    "word": "room"
+  },
+  {
+    "day": 95,
+    "word": "bedroom"
+  },
+  {
+    "day": 96,
+    "word": "bathroom"
+  },
+  {
+    "day": 97,
+    "word": "kitchen"
+  },
+  {
+    "day": 98,
+    "word": "door"
+  },
+  {
+    "day": 99,
+    "word": "window"
+  },
+  {
+    "day": 100,
+    "word": "wall"
+  },
+  {
+    "day": 101,
+    "word": "floor"
+  },
+  {
+    "day": 102,
+    "word": "stairs"
+  },
+  {
+    "day": 103,
+    "word": "elevator"
+  },
+  {
+    "day": 104,
+    "word": "key"
+  },
+  {
+    "day": 105,
+    "word": "lock"
+  },
+  {
+    "day": 106,
+    "word": "light"
+  },
+  {
+    "day": 107,
+    "word": "heater"
+  },
+  {
+    "day": 108,
+    "word": "fridge"
+  },
+  {
+    "day": 109,
+    "word": "stove"
+  },
+  {
+    "day": 110,
+    "word": "microwave"
+  },
+  {
+    "day": 111,
+    "word": "washer"
+  },
+  {
+    "day": 112,
+    "word": "dryer"
+  },
+  {
+    "day": 113,
+    "word": "bed"
+  },
+  {
+    "day": 114,
+    "word": "chair"
+  },
+  {
+    "day": 115,
+    "word": "table"
+  },
+  {
+    "day": 116,
+    "word": "sofa"
+  },
+  {
+    "day": 117,
+    "word": "toilet"
+  },
+  {
+    "day": 118,
+    "word": "shower"
+  },
+  {
+    "day": 119,
+    "word": "towel"
+  },
+  {
+    "day": 120,
+    "word": "blanket"
+  },
+  {
+    "day": 121,
+    "word": "bus",
+    "supplement": "here"
+  },
+  {
+    "day": 122,
+    "word": "stop",
+    "supplement": "there"
+  },
+  {
+    "day": 123,
+    "word": "station"
+  },
+  {
+    "day": 124,
+    "word": "ticket"
+  },
+  {
+    "day": 125,
+    "word": "fare"
+  },
+  {
+    "day": 126,
+    "word": "driver"
+  },
+  {
+    "day": 127,
+    "word": "taxi"
+  },
+  {
+    "day": 128,
+    "word": "car"
+  },
+  {
+    "day": 129,
+    "word": "road"
+  },
+  {
+    "day": 130,
+    "word": "street"
+  },
+  {
+    "day": 131,
+    "word": "sidewalk"
+  },
+  {
+    "day": 132,
+    "word": "crosswalk"
+  },
+  {
+    "day": 133,
+    "word": "traffic"
+  },
+  {
+    "day": 134,
+    "word": "left"
+  },
+  {
+    "day": 135,
+    "word": "right"
+  },
+  {
+    "day": 136,
+    "word": "straight"
+  },
+  {
+    "day": 137,
+    "word": "turn"
+  },
+  {
+    "day": 138,
+    "word": "walk"
+  },
+  {
+    "day": 139,
+    "word": "wait"
+  },
+  {
+    "day": 140,
+    "word": "go"
+  },
+  {
+    "day": 141,
+    "word": "come"
+  },
+  {
+    "day": 142,
+    "word": "get"
+  },
+  {
+    "day": 143,
+    "word": "off"
+  },
+  {
+    "day": 144,
+    "word": "on"
+  },
+  {
+    "day": 145,
+    "word": "near"
+  },
+  {
+    "day": 146,
+    "word": "far"
+  },
+  {
+    "day": 147,
+    "word": "map"
+  },
+  {
+    "day": 148,
+    "word": "address"
+  },
+  {
+    "day": 149,
+    "word": "where"
+  },
+  {
+    "day": 150,
+    "word": "lost"
+  },
+  {
+    "day": 151,
+    "word": "transfer"
+  },
+  {
+    "day": 152,
+    "word": "doctor"
+  },
+  {
+    "day": 153,
+    "word": "nurse"
+  },
+  {
+    "day": 154,
+    "word": "hospital"
+  },
+  {
+    "day": 155,
+    "word": "clinic"
+  },
+  {
+    "day": 156,
+    "word": "pharmacy"
+  },
+  {
+    "day": 157,
+    "word": "medicine"
+  },
+  {
+    "day": 158,
+    "word": "prescription"
+  },
+  {
+    "day": 159,
+    "word": "appointment"
+  },
+  {
+    "day": 160,
+    "word": "patient"
+  },
+  {
+    "day": 161,
+    "word": "health"
+  },
+  {
+    "day": 162,
+    "word": "sick"
+  },
+  {
+    "day": 163,
+    "word": "pain"
+  },
+  {
+    "day": 164,
+    "word": "fever"
+  },
+  {
+    "day": 165,
+    "word": "cough"
+  },
+  {
+    "day": 166,
+    "word": "dizzy"
+  },
+  {
+    "day": 167,
+    "word": "headache"
+  },
+  {
+    "day": 168,
+    "word": "stomach"
+  },
+  {
+    "day": 169,
+    "word": "heart"
+  },
+  {
+    "day": 170,
+    "word": "blood"
+  },
+  {
+    "day": 171,
+    "word": "pressure"
+  },
+  {
+    "day": 172,
+    "word": "allergy"
+  },
+  {
+    "day": 173,
+    "word": "emergency"
+  },
+  {
+    "day": 174,
+    "word": "ambulance"
+  },
+  {
+    "day": 175,
+    "word": "dentist"
+  },
+  {
+    "day": 176,
+    "word": "eye"
+  },
+  {
+    "day": 177,
+    "word": "ear"
+  },
+  {
+    "day": 178,
+    "word": "hand"
+  },
+  {
+    "day": 179,
+    "word": "leg"
+  },
+  {
+    "day": 180,
+    "word": "foot"
+  },
+  {
+    "day": 181,
+    "word": "breathe"
+  },
+  {
+    "day": 182,
+    "word": "bank"
+  },
+  {
+    "day": 183,
+    "word": "account"
+  },
+  {
+    "day": 184,
+    "word": "deposit"
+  },
+  {
+    "day": 185,
+    "word": "withdraw"
+  },
+  {
+    "day": 186,
+    "word": "balance"
+  },
+  {
+    "day": 187,
+    "word": "cheque"
+  },
+  {
+    "day": 188,
+    "word": "debit"
+  },
+  {
+    "day": 189,
+    "word": "credit"
+  },
+  {
+    "day": 190,
+    "word": "PIN"
+  },
+  {
+    "day": 191,
+    "word": "password"
+  },
+  {
+    "day": 192,
+    "word": "bill"
+  },
+  {
+    "day": 193,
+    "word": "payment"
+  },
+  {
+    "day": 194,
+    "word": "tax"
+  },
+  {
+    "day": 195,
+    "word": "refund"
+  },
+  {
+    "day": 196,
+    "word": "exchange"
+  },
+  {
+    "day": 197,
+    "word": "coin"
+  },
+  {
+    "day": 198,
+    "word": "change"
+  },
+  {
+    "day": 199,
+    "word": "total"
+  },
+  {
+    "day": 200,
+    "word": "amount"
+  },
+  {
+    "day": 201,
+    "word": "fee"
+  },
+  {
+    "day": 202,
+    "word": "rent"
+  },
+  {
+    "day": 203,
+    "word": "insurance"
+  },
+  {
+    "day": 204,
+    "word": "pension"
+  },
+  {
+    "day": 205,
+    "word": "income"
+  },
+  {
+    "day": 206,
+    "word": "statement"
+  },
+  {
+    "day": 207,
+    "word": "signature"
+  },
+  {
+    "day": 208,
+    "word": "form"
+  },
+  {
+    "day": 209,
+    "word": "document"
+  },
+  {
+    "day": 210,
+    "word": "number"
+  },
+  {
+    "day": 211,
+    "word": "service"
+  },
+  {
+    "day": 212,
+    "word": "counter"
+  },
+  {
+    "day": 213,
+    "word": "weather"
+  },
+  {
+    "day": 214,
+    "word": "sunny"
+  },
+  {
+    "day": 215,
+    "word": "cloudy"
+  },
+  {
+    "day": 216,
+    "word": "rainy"
+  },
+  {
+    "day": 217,
+    "word": "snowy"
+  },
+  {
+    "day": 218,
+    "word": "windy"
+  },
+  {
+    "day": 219,
+    "word": "storm"
+  },
+  {
+    "day": 220,
+    "word": "rain"
+  },
+  {
+    "day": 221,
+    "word": "snow"
+  },
+  {
+    "day": 222,
+    "word": "ice"
+  },
+  {
+    "day": 223,
+    "word": "icy"
+  },
+  {
+    "day": 224,
+    "word": "slippery"
+  },
+  {
+    "day": 225,
+    "word": "freezing"
+  },
+  {
+    "day": 226,
+    "word": "warm"
+  },
+  {
+    "day": 227,
+    "word": "cool"
+  },
+  {
+    "day": 228,
+    "word": "temperature"
+  },
+  {
+    "day": 229,
+    "word": "degree"
+  },
+  {
+    "day": 230,
+    "word": "winter"
+  },
+  {
+    "day": 231,
+    "word": "spring"
+  },
+  {
+    "day": 232,
+    "word": "summer"
+  },
+  {
+    "day": 233,
+    "word": "fall"
+  },
+  {
+    "day": 234,
+    "word": "umbrella"
+  },
+  {
+    "day": 235,
+    "word": "jacket"
+  },
+  {
+    "day": 236,
+    "word": "coat"
+  },
+  {
+    "day": 237,
+    "word": "boots"
+  },
+  {
+    "day": 238,
+    "word": "gloves"
+  },
+  {
+    "day": 239,
+    "word": "scarf"
+  },
+  {
+    "day": 240,
+    "word": "hat"
+  },
+  {
+    "day": 241,
+    "word": "sweater"
+  },
+  {
+    "day": 242,
+    "word": "forecast"
+  },
+  {
+    "day": 243,
+    "word": "sunshine"
+  },
+  {
+    "day": 244,
+    "word": "phone"
+  },
+  {
+    "day": 245,
+    "word": "call"
+  },
+  {
+    "day": 246,
+    "word": "answer"
+  },
+  {
+    "day": 247,
+    "word": "message"
+  },
+  {
+    "day": 248,
+    "word": "text"
+  },
+  {
+    "day": 249,
+    "word": "email"
+  },
+  {
+    "day": 250,
+    "word": "internet"
+  },
+  {
+    "day": 251,
+    "word": "Wi-Fi"
+  },
+  {
+    "day": 252,
+    "word": "screen"
+  },
+  {
+    "day": 253,
+    "word": "button"
+  },
+  {
+    "day": 254,
+    "word": "charge"
+  },
+  {
+    "day": 255,
+    "word": "battery"
+  },
+  {
+    "day": 256,
+    "word": "mail"
+  },
+  {
+    "day": 257,
+    "word": "letter"
+  },
+  {
+    "day": 258,
+    "word": "package"
+  },
+  {
+    "day": 259,
+    "word": "stamp"
+  },
+  {
+    "day": 260,
+    "word": "envelope"
+  },
+  {
+    "day": 261,
+    "word": "delivery"
+  },
+  {
+    "day": 262,
+    "word": "mailbox"
+  },
+  {
+    "day": 263,
+    "word": "post"
+  },
+  {
+    "day": 264,
+    "word": "library"
+  },
+  {
+    "day": 265,
+    "word": "community"
+  },
+  {
+    "day": 266,
+    "word": "centre"
+  },
+  {
+    "day": 267,
+    "word": "office"
+  },
+  {
+    "day": 268,
+    "word": "government"
+  },
+  {
+    "day": 269,
+    "word": "ID"
+  },
+  {
+    "day": 270,
+    "word": "passport"
+  },
+  {
+    "day": 271,
+    "word": "licence"
+  },
+  {
+    "day": 272,
+    "word": "application"
+  },
+  {
+    "day": 273,
+    "word": "notice"
+  },
+  {
+    "day": 274,
+    "word": "family",
+    "supplement": "I"
+  },
+  {
+    "day": 275,
+    "word": "husband",
+    "supplement": "you"
+  },
+  {
+    "day": 276,
+    "word": "wife",
+    "supplement": "we"
+  },
+  {
+    "day": 277,
+    "word": "son",
+    "supplement": "he"
+  },
+  {
+    "day": 278,
+    "word": "daughter",
+    "supplement": "she"
+  },
+  {
+    "day": 279,
+    "word": "grandson",
+    "supplement": "my"
+  },
+  {
+    "day": 280,
+    "word": "granddaughter",
+    "supplement": "your"
+  },
+  {
+    "day": 281,
+    "word": "mother",
+    "supplement": "name"
+  },
+  {
+    "day": 282,
+    "word": "father"
+  },
+  {
+    "day": 283,
+    "word": "brother"
+  },
+  {
+    "day": 284,
+    "word": "sister"
+  },
+  {
+    "day": 285,
+    "word": "friend"
+  },
+  {
+    "day": 286,
+    "word": "neighbour"
+  },
+  {
+    "day": 287,
+    "word": "child"
+  },
+  {
+    "day": 288,
+    "word": "baby"
+  },
+  {
+    "day": 289,
+    "word": "people"
+  },
+  {
+    "day": 290,
+    "word": "man"
+  },
+  {
+    "day": 291,
+    "word": "woman"
+  },
+  {
+    "day": 292,
+    "word": "senior"
+  },
+  {
+    "day": 293,
+    "word": "guest"
+  },
+  {
+    "day": 294,
+    "word": "visit"
+  },
+  {
+    "day": 295,
+    "word": "meet"
+  },
+  {
+    "day": 296,
+    "word": "talk"
+  },
+  {
+    "day": 297,
+    "word": "listen"
+  },
+  {
+    "day": 298,
+    "word": "speak"
+  },
+  {
+    "day": 299,
+    "word": "understand"
+  },
+  {
+    "day": 300,
+    "word": "repeat"
+  },
+  {
+    "day": 301,
+    "word": "slowly"
+  },
+  {
+    "day": 302,
+    "word": "together"
+  },
+  {
+    "day": 303,
+    "word": "welcome"
+  },
+  {
+    "day": 304,
+    "word": "chat"
+  },
+  {
+    "day": 305,
+    "word": "restaurant"
+  },
+  {
+    "day": 306,
+    "word": "menu"
+  },
+  {
+    "day": 307,
+    "word": "order"
+  },
+  {
+    "day": 308,
+    "word": "server"
+  },
+  {
+    "day": 309,
+    "word": "plate"
+  },
+  {
+    "day": 310,
+    "word": "bowl"
+  },
+  {
+    "day": 311,
+    "word": "cup"
+  },
+  {
+    "day": 312,
+    "word": "spoon"
+  },
+  {
+    "day": 313,
+    "word": "fork"
+  },
+  {
+    "day": 314,
+    "word": "knife"
+  },
+  {
+    "day": 315,
+    "word": "napkin"
+  },
+  {
+    "day": 316,
+    "word": "taste"
+  },
+  {
+    "day": 317,
+    "word": "spicy"
+  },
+  {
+    "day": 318,
+    "word": "sour"
+  },
+  {
+    "day": 319,
+    "word": "bitter"
+  },
+  {
+    "day": 320,
+    "word": "size"
+  },
+  {
+    "day": 321,
+    "word": "small"
+  },
+  {
+    "day": 322,
+    "word": "medium"
+  },
+  {
+    "day": 323,
+    "word": "large"
+  },
+  {
+    "day": 324,
+    "word": "extra"
+  },
+  {
+    "day": 325,
+    "word": "park"
+  },
+  {
+    "day": 326,
+    "word": "garden"
+  },
+  {
+    "day": 327,
+    "word": "exercise"
+  },
+  {
+    "day": 328,
+    "word": "swimming"
+  },
+  {
+    "day": 329,
+    "word": "walking"
+  },
+  {
+    "day": 330,
+    "word": "class"
+  },
+  {
+    "day": 331,
+    "word": "activity"
+  },
+  {
+    "day": 332,
+    "word": "music"
+  },
+  {
+    "day": 333,
+    "word": "game"
+  },
+  {
+    "day": 334,
+    "word": "enjoy"
+  },
+  {
+    "day": 335,
+    "word": "time"
+  },
+  {
+    "day": 336,
+    "word": "day"
+  },
+  {
+    "day": 337,
+    "word": "week"
+  },
+  {
+    "day": 338,
+    "word": "month"
+  },
+  {
+    "day": 339,
+    "word": "year"
+  },
+  {
+    "day": 340,
+    "word": "hour"
+  },
+  {
+    "day": 341,
+    "word": "minute"
+  },
+  {
+    "day": 342,
+    "word": "Monday"
+  },
+  {
+    "day": 343,
+    "word": "Tuesday"
+  },
+  {
+    "day": 344,
+    "word": "Wednesday"
+  },
+  {
+    "day": 345,
+    "word": "Thursday"
+  },
+  {
+    "day": 346,
+    "word": "Friday"
+  },
+  {
+    "day": 347,
+    "word": "Saturday"
+  },
+  {
+    "day": 348,
+    "word": "Sunday"
+  },
+  {
+    "day": 349,
+    "word": "early"
+  },
+  {
+    "day": 350,
+    "word": "late"
+  },
+  {
+    "day": 351,
+    "word": "open"
+  },
+  {
+    "day": 352,
+    "word": "closed"
+  },
+  {
+    "day": 353,
+    "word": "start"
+  },
+  {
+    "day": 354,
+    "word": "finish"
+  },
+  {
+    "day": 355,
+    "word": "need"
+  },
+  {
+    "day": 356,
+    "word": "want"
+  },
+  {
+    "day": 357,
+    "word": "have"
+  },
+  {
+    "day": 358,
+    "word": "can"
+  },
+  {
+    "day": 359,
+    "word": "cannot"
+  },
+  {
+    "day": 360,
+    "word": "know"
+  },
+  {
+    "day": 361,
+    "word": "think"
+  },
+  {
+    "day": 362,
+    "word": "remember"
+  },
+  {
+    "day": 363,
+    "word": "forget"
+  },
+  {
+    "day": 364,
+    "word": "safe"
+  },
+  {
+    "day": 365,
+    "word": "careful"
+  }
+]
