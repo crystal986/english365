@@ -6,10 +6,10 @@ import numpy as np
 import soundfile as sf
 from kokoro import KPipeline
 TEXTS={
-    "audio/day15_main_slow.mp3": "Excuse me.",
-    "audio/day15_example1_slow.mp3": "Excuse me, where is the bus stop?",
-    "audio/day15_example2_slow.mp3": "Excuse me, is this seat taken?",
-    "audio/day15_example3_slow.mp3": "Excuse me, can you help me?",
+    "audio/day15_main_slow.mp3": "Where is the bus stop?",
+    "audio/day15_example1_slow.mp3": "Where is the bus stop?",
+    "audio/day15_example2_slow.mp3": "Is this the right bus stop?",
+    "audio/day15_example3_slow.mp3": "Where can I catch the bus?",
     "audio/day16_main_slow.mp3": "Please help me.",
     "audio/day16_example1_slow.mp3": "Please help me with this bag.",
     "audio/day16_example2_slow.mp3": "Can you help me, please?",
