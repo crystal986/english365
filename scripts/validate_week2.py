@@ -10,7 +10,7 @@ for n in range(9,15):
     html=Path(f"day{n}.html").read_text(encoding="utf-8")
     refs=re.findall(r'data-audio="([^"]+)"',html)
     assert len(refs)==(11 if n==14 else 4),(n,len(refs))
-    assert len(set(refs))==len(refs) if n!=14 else len(set(refs))==11
+    assert len(set(refs))==(10 if n==14 else 4)
     assert all("slow.mp3" in p for p in refs)
     assert "speechSynthesis" not in html
     assert "course.html" in html
